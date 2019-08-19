@@ -37,8 +37,10 @@
 
 			num1 = +prompt('Привет! Введи сюда число:');
 			num2 = +prompt('Ок! Теперь введи сюда еще одно число, и я покажу тебе магию:');
+			let min = num1 < num2 ? num1 : num2;
+			let max = num1 > num2 ? num1 : num2;
 			primeNum:
-			for (let i = num1; i <= num2; ++i) {
+			for (let i = min; i <= max; ++i) {
 
 		 		for (let j = 2; j < i; ++j) { 
 		    		if (i % j == 0) continue primeNum; 
@@ -47,16 +49,16 @@
 		  		document.write(i);
 				document.write('<br>');
 		  	}
-		  	primeNumRev:
-		  	for (let i = num2; i <= num1; ++i) {
+		  	//primeNumRev:
+		  	//for (let i = num2; i <= num1; ++i) {
 
-		 		for (let j = 2; j < i; ++j) { 
-		    		if (i % j == 0) continue primeNumRev; 
-		  		}
+		 	//	for (let j = 2; j < i; ++j) { 
+		    //		if (i % j == 0) continue primeNumRev; 
+		  	//	}
 
-				document.write(i);
-				document.write('<br>');
-			}
+			//	document.write(i);
+			//	document.write('<br>');
+			//}
 
 			document.write('Меджик! Все простые числа интервала!');
 			document.write('<br>');
